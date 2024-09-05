@@ -125,6 +125,12 @@ kconfig_to_ot_option(CONFIG_OPENTHREAD_UDP_FORWARD OT_UDP_FORWARD "Enable UDP fo
 kconfig_to_ot_option(CONFIG_OPENTHREAD_UPTIME OT_UPTIME "Enable support for tracking OpenThread instance's uptime")
 kconfig_to_ot_option(CONFIG_OPENTHREAD_VERHOEFF_CHECKSUM OT_VERHOEFF_CHECKSUM "Verhoeff checksum")
 
+# Set MUDThread options
+kconfig_to_ot_option(CONFIG_OT_MUD_ENABLE OT_MUDTHREAD "Enable MUDTHREAD support")
+if(CONFIG_MUD_URL)
+  set(OT_MUD_URL ${CONFIG_MUD_URL} CACHE STRING "Sets mud url")
+endif()
+
 if(CONFIG_OPENTHREAD_COPROCESSOR_VENDOR_HOOK_SOURCE)
   set(OT_NCP_VENDOR_HOOK_SOURCE ${CONFIG_OPENTHREAD_COPROCESSOR_VENDOR_HOOK_SOURCE} CACHE STRING "NCP vendor hook source file name" FORCE)
 endif()
