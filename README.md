@@ -1,0 +1,2 @@
+## Changes
+This fork of [sdk-zephyr](https://github.com/nrfconnect/sdk-zephyr) only extends the openthread module CmakeLists file with the ability to configure the needed config options for my fork of [openthread](https://github.com/WoutervanHoof/openthread). This allows enabling MUD and setting a MUD URL. Instructions on setting up a full development environment can be found in the example project [mt-cli](https://github.com/WoutervanHoof/mt-cli).
